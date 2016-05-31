@@ -1,6 +1,7 @@
 {
-  "name": "spreadsheet-tunes",
+  "name": "spreadjams",
   "version": "1.0.0",
+  "private": true,
   "description": "collaborative live-coding of music",
   "scripts": {
     "start": "node server.js",
@@ -22,7 +23,7 @@
     "webpack-dev-middleware": "^1.6.1",
     "webpack-dev-server": "^1.14.1",
     "webpack-glsl-loader": "^1.0.1",
-    "webpack-hot-middleware": "^2.10.0"
+    "webpack-hot-middleware": "^2.10.0",
     "tone": "^0.6.1"
-  },
+  }
 }
