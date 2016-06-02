@@ -1,6 +1,5 @@
 import React, {PropTypes} from "react";
 import ReactDOM from "react-dom";
-import gapi from "gapi";
 
 import Tone from "tone";
 
@@ -10,12 +9,22 @@ export default React.createClass ({
   propTypes: {
     roll: PropTypes.array
   },
+  componentDidMount() {
+    this.sample = new Tone.Buffer("./FWDL.mp3");
+    this.player = new Tone.Player({
+      url: this.sample,
+      retrigger: true
+    }) .toMaster();
+    //sampler!
+  },
   play () {
     console.log("playing bithc");
-    let player = new Tone.Player("./FWDL.mp3").toMaster();
-    Tone.Buffer.on("load", () => {
-      player.start();
-    });
+    let loop = new Tone.Sequence((time, note) => {
+      console.log(time, note);
+      this.player.start();
+    }, [0, 1, 2, 3, 4, 5, 6, 7, 8], "4n");
+    loop.start();
+    Tone.Transport.start();
   },
   render() {
     const cool = this.props.roll.map(
