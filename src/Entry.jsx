@@ -101,7 +101,7 @@ const test = [[5,0],[7,0],[9,0],[0,0],[6,0],[0,0],[9,0],[0,0],[9,0],[0,"1"],[9,0
 const Entry = React.createClass({
   render() {
     return (<div>
-            <h1> spreadjam </h1>
+            <h1> spreadjams </h1>
             <img src="./jam.jpg"/>
             <Sheet roll={test}/>
                 {/* <AuthWrapper/> */}
