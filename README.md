@@ -1,4 +1,4 @@
-# spreadjams
+# spreadjam
 
 collaborative live-coding music on google sheets yo
 
